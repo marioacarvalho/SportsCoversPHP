@@ -1,0 +1,4 @@
+SportsCoverPHP
+==============
+
+SportsCoverPHP main API
