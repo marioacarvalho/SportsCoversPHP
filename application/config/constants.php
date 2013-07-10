@@ -36,6 +36,21 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|--------------------------------------------------------------------------
+| Newspapers Database Indexes
+|--------------------------------------------------------------------------
+|
+| 
+|
+*/
+
+define('ABOLA',							1);
+define('RECORD',						2);
+define('OJOGO',							3); 
+define('MARCA',							4);
+define('ASJ',							5); 
+define('PRZEGLAD_SPORTOW',				6); 
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
