@@ -29,6 +29,11 @@ class Main extends CI_Controller {
 		$this -> _updateMarca();
 		$this -> _updateAS();
 		$this -> _updatePrzegladSportowy();
+		$this -> _updateDailyStar();
+		$this -> _updateLeEquip();
+		$this -> _updateLanceDigital();
+		$this -> _updateLaGazzettaDelloSport();
+		$this -> _updateOleArgentina();
 		$localip = $_SERVER['REMOTE_ADDR'];
 		$geo_data = json_decode($this -> _get_geolocation($localip));
 		$this -> crud -> create('localhostUpdates', array('ip' => $localip, 'country' => $geo_data->countryName, 'timeJob' => date("Y-m-d H:i:s")));
@@ -42,7 +47,9 @@ class Main extends CI_Controller {
 		$this -> crud -> create('users', array('ip' => $localip));
 		$geo_data = json_decode($this -> _get_geolocation($localip));
 		$data['user_info'] = $geo_data;
-		$this->output->set_header($this->config->item('json_header'));
+	//	$countriesArray = $this -> crud -> retrieve('base_country', '*', FALSE, '_ARRAY');
+	//	$data['countries_info'] = $countriesArray;
+		$this->output->set_content_type('application/json');
     	$this->output->set_output(json_encode($data));
 	}
 
@@ -51,7 +58,119 @@ class Main extends CI_Controller {
 		//Use backup server if cannot make a connection
 		return $d;
 	}
+	
+	
+	/*
+	 * 
+	 * 
+	 * ARGENTINA
+	 * 
+	 */
+	 
+	 private function _updateOleArgentina() 
+	 {
+	 	
+	 	$url = 'http://www.ole.com.ar';
+		$html = file_get_html($url);
+		$coverURL = '';
+		foreach ($html->find('img' ) as $element) {
+			if (strpos($element -> src, 'la-tapa') !== false) {
+				$coverURL = $url.$element->src;
+				$urlFinal = str_replace('_20.jpg', '_21.jpg', $coverURL);	
+				$this -> crud -> update('newspapers', array('coverURL' => $urlFinal, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => OLE_ARGENTINA));
+			}
+		}
+	}
+	/*
+	 * 
+	 * 
+	 * BRASIL
+	 * 
+	 * 
+	 */
+	 
+	private function _updateLanceDigital() {
+		$url = 'http://www.lancedigital.com.br/';
+		$html = file_get_html($url);
 
+		foreach ($html->find('div') as $element) {
+			if (strpos($element -> id, 'container') !== false) {
+				foreach ($element->find('section') as $element2) {
+					if (strpos($element2 -> class, 'home') !== false) {
+						foreach ($element2->find('div') as $element3) {
+							if (strpos($element3 -> id, 'carousel') !== false) {
+								foreach ($element3->find('div a img') as $element4) {
+									$edition = $element4->alt;
+									if (strpos($edition, 'Rio') !== false) {
+										$this->_changeEndAndUpdateLanceDigital(LANCE_DIGITAL_RJ, $element4->src);
+									}
+									if (strpos($edition, 'Paulo') !== false) {
+										$this->_changeEndAndUpdateLanceDigital(LANCE_DIGITAL_SP, $element4->src);
+											
+										
+									}
+
+								}
+								
+							}
+						}
+					}
+				}
+					
+			}
+		}
+		
+	}
+	
+	private function _changeEndAndUpdateLanceDigital($newspaperID, $url) {
+		$urlFinal = str_replace('baja', 'alta', $url);	
+		$this -> crud -> update('newspapers', array('coverURL' => $urlFinal, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => $newspaperID));
+			
+	}
+	/*
+	 * 
+	 * 
+	 * ENGLAND
+	 * 
+	 */
+	 private function _updateDailyStar() {
+		$url = 'http://images.dailystar-uk.co.uk/dynamic/pixfeed/covers/257x330back/';
+		$dateToday = date("Y-m-d");
+		$extension = '.jpg';
+		$finalURL = ''.$url.$dateToday.$extension;
+		$this -> crud -> update('newspapers', array('coverURL' => $finalURL, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => DAILY_STAR));
+	}
+	 
+	 /*
+	  * 
+	  * 
+	  * FRANCE
+	  * 
+	  */
+	  private function _updateLeEquip()
+	  {
+	  	$url = 'http://www.lequipe.fr/Quotidien/une/une';
+		$month = date('m');
+		$year = date('y');
+		$bigYear = date('Y');
+		$day = date('d');
+		$extension = '_hd.jpg';
+		$urlFinal = ''.$url.$day.$month.$bigYear.$extension;
+		$this -> crud -> update('newspapers', array('coverURL' => $urlFinal, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => LE_EQUIPE));
+		
+	  }
+	/*
+	*
+	*
+	* ITALY
+	*
+	*/
+	private function _updateLaGazzettaDelloSport()
+	{
+		$url = 'http://images2.gazzettaobjects.it/primapagina/images/prima_pagina_grande.jpg?'.date('Y/m/d');
+		$this -> crud -> update('newspapers', array('coverURL' => $url, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => LA_GAZZETTA_DELLO_SPORT));
+
+	}
 	/*
 	 *
 	 * PORTUGAL
@@ -80,7 +199,7 @@ class Main extends CI_Controller {
 				$abolaURL = 'http://www.abola.pt/wqui/wfotosdia/wdiag.jpg?' . date('Y/m/d');
 				break;
 			case 5 :
-				$abolaURL = 'http://www.abola.pt/wsex/wfotosdia/wdiag.jpg?' . date('Y/m/d');
+				$abolaURL = 'http://www.abola.pt/wset/wfotosdia/wdiag.jpg?' . date('Y/m/d');
 				break;
 			case 6 :
 				$abolaURL = 'http://www.abola.pt/wsab/wfotosdia/wdiag.jpg?' . date('Y/m/d');
@@ -151,7 +270,7 @@ class Main extends CI_Controller {
 		foreach ($html->find('div') as $element) {
 			if (strpos($element -> id, 'contenido-noticia') !== false) {
 				foreach ($element->find('img') as $element2) {
-					if (strpos($element2 -> src, 'http://estaticos01.marca.com/imagenes/' . $bigYear . '/' . $month . '/' . $day . '/') !== false) {
+					if (strpos($element2 -> src, 'http://estaticos02.marca.com/imagenes/' . $bigYear . '/' . $month . '/' . $day . '/') !== false) {
 						$amarca = $element2 -> src;
 					}
 				}
@@ -189,6 +308,11 @@ class Main extends CI_Controller {
 	 {
 	 	$this -> load -> library('simple_html_dom');
 		$this -> load -> model('crud');
+		$urlgrab = $this->_updateMarca();
+		$this->output->set_content_type('application/json');
+    	$this->output->set_output(json_encode($urlgrab));
+		
+		
 
 	 }
 	 private function _updatePrzegladSportowy()
@@ -206,11 +330,12 @@ class Main extends CI_Controller {
 		 
 			
 		}
-		$this -> crud -> update('newspapers', array('coverURL' => $urlImage.$imageName, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => PRZEGLAD_SPORTOW));
+		$varSQL = "".$urlImage.$imageName;
+		$this -> crud -> update('newspapers', array('coverURL' => $varSQL, 'lastUpdate' => date("Y-m-d H:i:s")), array('id' => PRZEGLAD_SPORTOW));
 	 }
 
 	private function _getAllData() {
-		$alldata = $this -> crud -> retrieve('newspapers', '*', FALSE, '_ARRAY', FALSE, array( array('base_country', 'newspapers.country = base_country.id', 'left')));
+		$alldata = $this -> crud -> retrieve('newspapers', '*', FALSE, '_ARRAY', 'country', array( array('base_country', 'newspapers.country = base_country.id', 'left')));
 		return $alldata;
 
 	}

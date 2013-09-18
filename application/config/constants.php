@@ -45,12 +45,25 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 |
 */
 
+define('MSECRET',						'10U@R3fUK1nG1D30T@SSH0L3');
 define('ABOLA',							1);
 define('RECORD',						2);
 define('OJOGO',							3); 
 define('MARCA',							4);
 define('ASJ',							5); 
-define('PRZEGLAD_SPORTOW',				6); 
+define('PRZEGLAD_SPORTOW',				6);
+define('DAILY_STAR',					7); 
+define('LE_EQUIPE',						8); 
+define('LANCE_DIGITAL_RJ',				9); 
+define('LANCE_DIGITAL_SP',				10); 
+define('LA_GAZZETTA_DELLO_SPORT',		11); 
+define('OLE_ARGENTINA',					12); 
+
+
+define('EMAIL_NO_REPLY','mail@sportscovers.co');
+define('EMAIL_NO_REPLY_NAME','SportsCover.co'); 
+define('MODERATOR_EMAILS','mariocarvalho_@hotmail.pt');
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
