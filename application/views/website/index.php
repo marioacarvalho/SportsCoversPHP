@@ -16,12 +16,12 @@
     <![endif]-->
 
 
-    <link href="<?=base_url()?>assets/font/stylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>assets/css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>assets/css/media-queries.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <link href="<?=base_url()?>assets/website/font/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>assets/website/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>assets/website/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>assets/website/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>assets/website/css/media-queries.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/website/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 
     <meta name="viewport" content="width=device-width" />
 
@@ -336,12 +336,12 @@
 </div>
 
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
-<script src="<?=base_url()?>assets/js/bootstrap-collapse.js"></script>
-<script src="<?=base_url()?>assets/js/bootstrap-scrollspy.js"></script>
-<script src="<?=base_url()?>assets/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-<script src="<?=base_url()?>assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<script src="<?=base_url()?>assets/js/init.js"></script>
+<script src="<?=base_url()?>assets/website/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/website/js/bootstrap-collapse.js"></script>
+<script src="<?=base_url()?>assets/website/js/bootstrap-scrollspy.js"></script>
+<script src="<?=base_url()?>assets/website/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="<?=base_url()?>assets/website/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="<?=base_url()?>assets/website/js/init.js"></script>
 
 </body>
 </html>
