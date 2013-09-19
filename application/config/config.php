@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '194.14.179.154/SportsCoversPHP';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91f642-b0e5-439a-ba25-c3f3b38f136e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/index.php" afterPath="$PROJECT_DIR$/application/views/website/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
     </list>
     <ignored path="SportsCoverPHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/website/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="343" column="35" selection-start="12321" selection-end="12321" vertical-scroll-proportion="0.7204969">
+            <state line="343" column="35" selection-start="12321" selection-end="12321" vertical-scroll-proportion="-15.916667">
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="46" selection-start="585" selection-end="585" vertical-scroll-proportion="52.5">
+            <state line="16" column="23" selection-start="502" selection-end="502" vertical-scroll-proportion="0.4477612">
               <folding />
             </state>
           </provider>
@@ -128,9 +128,9 @@
       <list>
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/controllers/API/main.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/welcome.php" />
         <option value="$PROJECT_DIR$/application/views/website/index.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -496,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="46" selection-start="585" selection-end="585" vertical-scroll-proportion="52.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/welcome.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="44" selection-start="679" selection-end="679" vertical-scroll-proportion="-7.0833335">
@@ -512,7 +505,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="35" selection-start="12321" selection-end="12321" vertical-scroll-proportion="0.7204969">
+        <state line="343" column="35" selection-start="12321" selection-end="12321" vertical-scroll-proportion="-15.916667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="502" selection-end="502" vertical-scroll-proportion="0.4477612">
           <folding />
         </state>
       </provider>
