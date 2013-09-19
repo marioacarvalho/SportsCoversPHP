@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e91f642-b0e5-439a-ba25-c3f3b38f136e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/website/index.php" afterPath="$PROJECT_DIR$/application/views/website/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SportsCoverPHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +57,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/website/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="72" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-0.0931677">
+            <state line="343" column="20" selection-start="12140" selection-end="12140" vertical-scroll-proportion="15.978261">
               <folding />
             </state>
           </provider>
@@ -513,7 +512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/website/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="72" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-0.0931677">
+        <state line="343" column="20" selection-start="12140" selection-end="12140" vertical-scroll-proportion="15.978261">
           <folding />
         </state>
       </provider>

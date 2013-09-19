@@ -16,12 +16,12 @@
     <![endif]-->
 
 
-    <link href="<?=base_url()?>/assets/font/stylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>/assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>/assets/css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url()?>/assets/css/media-queries.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <link href="assets/font/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/media-queries.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 
     <meta name="viewport" content="width=device-width" />
 
@@ -336,12 +336,12 @@
 </div>
 
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<script src="js/init.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="assets/js/init.js"></script>
 
 </body>
 </html>
