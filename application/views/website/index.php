@@ -16,12 +16,12 @@
     <![endif]-->
 
 
-    <link href="font/stylesheet.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="css/media-queries.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <link href="<?=base_url()?>/assets/font/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>/assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>/assets/css/media-queries.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
 
     <meta name="viewport" content="width=device-width" />
 
