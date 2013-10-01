@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'http://194.14.179.154:3306';
 $db['default']['username'] = 'sportscover';
 $db['default']['password'] = 'p1m3nt@89_';
 $db['default']['database'] = 'sportscover';
