@@ -50,8 +50,8 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '194.14.179.154';
 $db['default']['port'] = 3306;
-$db['default']['username'] = 'sportscover';
-$db['default']['password'] = 'p1m3nt@89_';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'car1989valho_';
 $db['default']['database'] = 'sportscover';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
