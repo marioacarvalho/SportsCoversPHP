@@ -30,7 +30,7 @@
       <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="56" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.3846154">
+            <state line="50" column="30" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.3846154">
               <folding />
             </state>
           </provider>
@@ -366,7 +366,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="56" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.3846154">
+        <state line="50" column="30" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.3846154">
           <folding />
         </state>
       </provider>
